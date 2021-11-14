@@ -1,0 +1,174 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Stay nice</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <!--<link href="{% static 'assets/img/favicon.png' %}" rel="icon">-->
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,500,500i,600,600i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets_portfolio/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets_portfolio/vendor/hover/hover.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets_portfolio/vendor/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets_portfolio/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets_portfolio/vendor/venobox/venobox.css' %}" rel="stylesheet">
+  <link href="{% static 'assets_portfolio/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets_portfolio/css/style.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Folio - v2.2.1
+  * Template URL: https://bootstrapmade.com/folio-bootstrap-portfolio-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Navbar ======= -->
+  <nav id="main-nav" class="subpage-nav">
+    <div class="row">
+      <div class="container">
+
+        <div class="responsive"><i data-icon="m" class="ion-navicon-round"></i></div>
+
+        <ul class="nav-menu list-unstyled">
+          <li><a href="/" class="smoothScroll">Home</a></li>
+          <li><a href="/#about" class="smoothScroll">About</a></li>
+          <li><a href="/#portfolio" class="smoothScroll">Projects</a></li>
+          <li><a href="/#journal" class="smoothScroll">Blog</a></li>
+        <!--  <li><a href="/#contact" class="smoothScroll">Contact</a></li>-->
+        </ul>
+
+      </div>
+    </div>
+  </nav><!-- End Navbar -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>miREV: Online Tool and Database.</h2>
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li><a href="/#portfolio">Portfolio</a></li>
+            <li>Portfolio Details</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- Breadcrumbs Section -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section class="portfolio-details">
+      <div class="container">
+
+        <div class="portfolio-details-container">
+
+          <div class="owl-carousel portfolio-details-carousel">
+            <img src="{% static 'assets_portfolio/img/portfolio/miREV_fit.jpg' %}" class="img-fluid" alt="">
+            <img src="{% static 'assets_portfolio/img/portfolio/graphical_abstract_fit2.jpg' %}" class="img-fluid" alt="">
+            <img src="{% static 'assets_portfolio/img/portfolio/S3 figure_fit2.jpg' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="portfolio-info">
+            <h3>Project information</h3>
+            <ul>
+              <li><strong>Category</strong>: Shiny App</li>
+              <!--<li><strong>Client</strong>: ASU Company</li>-->
+              <li><strong>Project date</strong>: March, 2021</li>
+              <li><strong>Project URL</strong>: <a href="https://www.physio.wzw.tum.de/mirev/">Try miREV</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="portfolio-description">
+          <h2>Description</h2>
+          <p>
+            miREV was developed as an easy to use online tool with a graphical user interface.
+            Main goal is to uncover potential reference RNAs from EV studies in relation to different
+            experimental conditions. Because suitable reference RNAs, for instance to validate findings
+            from NGS experiments or to perform meaningful expression analyses by RT-qPCR, can vary from
+            study to study because the RNA fingerprint strongly depends on the kind of experimental methods used.
+            miREV also serves as a database. Interested parties can download the raw read counts and the associated
+            metadata for further analyzes.<br /><br />
+            miREV contains data from publicly accessible sources as well as own data. The whole data set focuses on
+            blood derived EVs and represents 9 different pathologies and 3 different isolation methods from both serum
+            and plasma. The database only contains data sets with validated EV or exosome isolates. Data was processed
+            to exclude poor quality data and reads mapping to other RNA species (e.g. rRNA, tRNA). In total 654 samples
+            from 13 studies with 15 different physiological and pathophysological conditions were incorporated. 428
+            samples remained after the strict filtering procedure. To account for variable analysis setups, count
+            lists were normalized by 6 commonly used normalization methods for abundance analyses and potential,
+            stably expressed reference transcripts were evaluated by 3 different established algorithms. Raw count
+            tables as well as the associated metadata for the selected sample set can be downloaded directly in the app.
+            The code with which the results of the database were calculated is available on <a href="https://github.com/Hildebrandt-Alex/miREV">GitHub</a>
+          </p>
+        </div>
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <div id="footer" class="text-center">
+    <div class="container">
+      <div class="socials-media text-center">
+
+        <ul class="list-unstyled">
+          <li><a href="https://github.com/Hildebrandt-Alex" target="_blank"><i class="ion-social-github"></i></a></li>
+          <li><a href="https://de.linkedin.com/in/alex-hildebrandt-536906170?trk=people-guest_people_search-card" target="_blank"><i class="ion-social-linkedin" ></i></a></li>
+          <p> <br> Alex Hildebrandt</p>
+        </ul>
+
+      </div>
+
+      <p>&copy; Copyrights Folio. All rights reserved.</p>
+
+      <div class="credits">
+        <!--
+        All the links in the footer should remain intact.
+        You can delete the links only if you purchased the pro version.
+        Licensing information: https://bootstrapmade.com/license/
+        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Folio
+      -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+
+    </div>
+  </div><!-- End Footer -->
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets_portfolio/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'assets_portfolio/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets_portfolio/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'assets_portfolio/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets_portfolio/vendor/typed/typed.js' %}"></script>
+  <script src="{% static 'assets_portfolio/vendor/jquery-sticky/jquery.sticky.js' %}"></script>
+  <script src="{% static 'assets_portfolio/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets_portfolio/vendor/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'assets_portfolio/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets_portfolio/js/main.js' %}"></script>
+
+</body>
+
+</html>

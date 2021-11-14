@@ -1,0 +1,350 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Stay nice</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <!--<link href="{% static 'assets_portfolio/img/favicon.png' %}" rel="icon">-->
+  <link href="{% static 'assets_portfolio/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,500,500i,600,600i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets_portfolio/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets_portfolio/vendor/hover/hover.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets_portfolio/vendor/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets_portfolio/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets_portfolio/vendor/venobox/venobox.css' %}" rel="stylesheet">
+  <link href="{% static 'assets_portfolio/vendor/owl.carousel/assets_portfolio/owl.carousel.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets_portfolio/css/style.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Folio - v2.2.1
+  * Template URL: https://bootstrapmade.com/folio-bootstrap-portfolio-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Navbar ======= -->
+  <nav id="main-nav">
+    <div class="row">
+      <div class="container">
+
+
+
+        <div class="responsive"><i data-icon="m" class="ion-navicon-round"></i></div>
+
+        <ul class="nav-menu list-unstyled">
+          <li><a href="/" class="smoothScroll">Home</a></li>
+          <li><a href="#about" class="smoothScroll">About</a></li>
+          <li><a href="#portfolio" class="smoothScroll">Projects</a></li>
+          <li><a href="#journal" class="smoothScroll">Blog</a></li>
+          <!-- <li><a href="#contact" class="smoothScroll">Contact</a></li>-->
+        </ul>
+
+      </div>
+    </div>
+  </nav><!-- End Navbar -->
+
+  <!-- ======= Hero Section ======= -->
+  <div id="hero"   class="home">
+
+
+    <div class="container">
+      <div class="hero-content">
+        <h1>I'm <span class="typed"></span></h1>
+        <p class="typed-items" data-typed-person="{{ home.user }}">{{ home.qualifications }}</p>
+
+        <ul class="list-unstyled list-social">
+          <li><a href="https://github.com/Hildebrandt-Alex" target="_blank"><i class="ion-social-github"></i></a></li>
+          <li><a href="https://de.linkedin.com/in/alex-hildebrandt-536906170?trk=people-guest_people_search-card" target="_blank"><i class="ion-social-linkedin" ></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <div id="about" class="paddsection">
+      <div class="container">
+        <div class="row justify-content-between">
+
+          <div class="col-lg-4 ">
+            <div class="div-img-bg">
+              <div class="about-img">
+                <img src="{{ home.user_picture_1.url }}" class="img-responsive" alt="me">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="about-descr">
+
+              <p class="p-heading">{{ home.heading_1 }} </p>
+              <p class="separator">{{ home.introduction }}</p>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div><!-- End About Section -->
+
+    <!-- ======= Services Section ======= -->
+    <div id="services">
+      <div class="container">
+
+        <div class="services-carousel owl-theme">
+
+          <div class="services-block">
+
+            <i class="ion-ios-flask-outline"></i>
+            <span>Molecular scientist</span>
+            <p class="separator">Without an adequate answer to the question, "Why?" the price is always to high. - Bobb Biehl</p>
+
+          </div>
+
+          <div class="services-block">
+
+            <i class="ion-ios-color-wand-outline"></i>
+            <span>WEB DESIGN</span>
+            <p class="separator">Website without visitors is like a ship lost in the horizon. ― Dr. Christopher Dayagdag</p>
+
+          </div>
+
+          <div class="services-block">
+
+            <i class="ion-ios-analytics-outline"></i>
+            <span>data science</span>
+            <p class="separator">If you can’t explain it simply, you don’t understand it well enough. — Albert Einstein</p>
+
+          </div>
+
+          <div class="services-block">
+
+            <i class="ion-ios-camera-outline"></i>
+            <span>PHOTOGRAPHY</span>
+            <p class="separator">Photography is the story I fail to put into words. – Destin Sparks </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div><!-- End Services Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <div id="portfolio" class="paddsection">
+
+      <div class="container">
+        <div class="section-title text-center">
+          <h2>My Projects</h2>
+        </div>
+      </div>
+
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">Shiny App</li>
+              <li data-filter=".filter-card">Data Science</li>
+              <li data-filter=".filter-web">Biomarker</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <img src="{% static 'assets_portfolio/img/portfolio/miREV_fit.jpg' %}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>miREV</h4>
+              <p>Shiny App</p>
+              <a href="{% static 'assets_portfolio/img/portfolio/miREV_fit.jpg' %}" data-gall="portfolioGallery" class="venobox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+              <a href="miREV.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div><!-- End Portfolio Section -->
+
+    <!-- ======= Blog Section ======= -->
+    <div id="journal" class="text-left paddsection">
+
+      <div class="container">
+        <div class="section-title text-center">
+          <a href = "blog_index.html"> <h2>Visit my Blog Page</h2> </a>
+        </div>
+      </div>
+
+      <section class="latest-posts">
+        <div class="container">
+          <header>
+            <h2>Latest from my blog</h2>
+            <p class="text-big">My blog posts have different topics Iam interessted in. Feel free to explore. Enjoy reading.</p>
+          </header>
+          <div class="row">
+            {% for post in queryset %}
+            <div class="post col-md-4">
+              <div class="post-thumbnail"><a href="{{ post.get_absolute_url }}"><img src="{{post.thumbnail.url }}" alt="..." class="img-fluid"></a></div>
+              <div class="post-details">
+                <div class="post-meta d-flex justify-content-between">
+                  <div class="date">{{ post.timestamp }}</div>
+                  <div class="category">
+                    {% for cat in post.categories.all %}
+                    <a href="#">{{  cat }}</a></div>
+                    {% endfor %}
+                </div><a href="{{ post.get_absolute_url }}">
+                  <h3 class="h4">{{ post.title }}</h3></a>
+                <p class="text-muted">{{ post.overview }}</p>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+
+    </div><!-- End Journal Section -->
+
+    <!-- ======= Contact Section ======= -->
+  <div id="contact" class="paddsection">
+      <!--  <div class="container">
+        <div class="contact-block1">
+          <div class="row">
+
+            <div class="col-lg-6">
+              <div class="contact-contact">
+
+                <h2 class="mb-30">GET IN TOUCH</h2>
+
+                <ul class="contact-details">
+                  <li><span>23 Main, Street</span></li>
+                  <li><span>New York, United States</span></li>
+                  <li><span>+88 01912704287</span></li>
+                  <li><span>example@example.com</span></li>
+                </ul>
+
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <form action="forms_portfolio/contact.php" method="post" role="form" class="php-email-form">
+                <div class="row">
+
+                  <div class="col-lg-6">
+                    <div class="form-group contact-block1">
+                      <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                      <div class="validate"></div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                      <div class="validate"></div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                      <div class="validate"></div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                      <textarea class="form-control" name="message" rows="12" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                      <div class="validate"></div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-12 mb-3">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                  </div>
+
+                  <div class="col-lg-12">
+                    <input type="submit" class="btn btn-defeault btn-send" value="Send message">
+                  </div>
+
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>-->
+    </div>
+    <!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <div id="footer" class="text-center">
+    <div class="container">
+      <div class="socials-media text-center">
+
+        <ul class="list-unstyled">
+          <li><a href="https://github.com/Hildebrandt-Alex" target="_blank"><i class="ion-social-github"></i></a></li>
+          <li><a href="https://de.linkedin.com/in/alex-hildebrandt-536906170?trk=people-guest_people_search-card" target="_blank"><i class="ion-social-linkedin" ></i></a></li>
+          <p> <br> Alex Hildebrandt</p>
+        </ul>
+
+      </div>
+
+      <p>&copy; Copyrights Folio. All rights reserved.</p>
+
+      <div class="credits">
+        <!--
+        All the links in the footer should remain intact.
+        You can delete the links only if you purchased the pro version.
+        Licensing information: https://bootstrapmade.com/license/
+        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Folio
+      -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+
+    </div>
+  </div><!-- End Footer -->
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets_portfolio/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'assets_portfolio/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets_portfolio/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'assets_portfolio/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets_portfolio/vendor/typed/typed.js' %}"></script>
+  <script src="{% static 'assets_portfolio/vendor/jquery-sticky/jquery.sticky.js' %}"></script>
+  <script src="{% static 'assets_portfolio/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets_portfolio/vendor/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'assets_portfolio/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets_portfolio/js/main.js' %}"></script>
+
+
+
+</body>
+
+</html>
